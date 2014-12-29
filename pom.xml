@@ -7,6 +7,14 @@
   <version>1.0-SNAPSHOT</version>
   <name>JelasticHazelcastServer Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <properties>
+    <spring.version>4.0.6.RELEASE</spring.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <org.mongodb.version>2.7.3</org.mongodb.version>
+    <org.springframework.data.mongodb>1.0.1.RELEASE</org.springframework.data.mongodb>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -20,19 +28,54 @@
       <version>1.2.17</version>
     </dependency>
     <dependency>
-      <groupId>com.hazelcast</groupId>
-      <artifactId>hazelcast</artifactId>
-      <version>3.3.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.hazelcast</groupId>
-      <artifactId>hazelcast-client</artifactId>
-      <version>3.3.3</version>
-    </dependency>
-    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.0.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.hazelcast</groupId>
+      <artifactId>hazelcast</artifactId>
+      <version>3.0</version>
+    </dependency>
+    <dependency>
+      <artifactId>hazelcast-spring</artifactId>
+      <groupId>com.hazelcast</groupId>
+      <version>3.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>${org.mongodb.version}</version>
+      <!--<scope>provided</scope>-->
+      <!--<optional>true</optional>-->
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-mongodb</artifactId>
+      <version>${org.springframework.data.mongodb}</version>
+      <!--<scope>provided</scope>-->
+      <!--<optional>true</optional>-->
+      <!--<exclusions>-->
+        <!--<exclusion>-->
+          <!--<artifactId>spring-tx</artifactId>-->
+          <!--<groupId>org.springframework</groupId>-->
+        <!--</exclusion>-->
+        <!--<exclusion>-->
+          <!--<artifactId>mongo-java-driver</artifactId>-->
+          <!--<groupId>org.mongodb</groupId>-->
+        <!--</exclusion>-->
+      <!--</exclusions>-->
     </dependency>
   </dependencies>
   <build>
@@ -49,5 +92,7 @@
     </plugins>
     <finalName>JelasticHazelcastServer</finalName>
   </build>
+
+
 
 </project>
