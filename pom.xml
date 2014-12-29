@@ -45,12 +45,12 @@
     <dependency>
       <groupId>com.hazelcast</groupId>
       <artifactId>hazelcast</artifactId>
-      <version>3.0</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <artifactId>hazelcast-spring</artifactId>
       <groupId>com.hazelcast</groupId>
-      <version>3.0</version>
+      <version>3.3.3</version>
     </dependency>
 
     <dependency>

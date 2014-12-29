@@ -22,7 +22,7 @@
               <constructor-arg name="databaseName" value="test"/>
        </bean>
 
-       <bean class="com.hazelcast.spring.mongodb.MongoMapStore" id="mongomapstore">
+       <bean class="com.berkgokden.mongodb.MongoMapStore" id="mongomapstore">
               <property name="mongoTemplate" ref="mongoTemplate" />
        </bean>
 
